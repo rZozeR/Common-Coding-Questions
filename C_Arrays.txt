@@ -12,6 +12,7 @@ void display(int ar[])
     printf("\n");
 }
 
+//1. Question
 int Subarray_1(int ar[], int sum)
 {
     int ct, ct2, dec;
@@ -38,6 +39,7 @@ int Subarray_1(int ar[], int sum)
     return (-1);
 }
 
+//4. Question
 int Missing_4(int arr[])
 {
     int ct;
@@ -57,6 +59,7 @@ int Missing_4(int arr[])
     return (0);
 }
 
+//9. Question
 void Sort9(int arr[], int max)
 {
     int ct;
@@ -96,6 +99,7 @@ void Sort9(int arr[], int max)
     }
 }
 
+//13. Question
 void Reverse13(int arr[],int rev)
 {
     int ct, loop, temp, start, end;
@@ -125,6 +129,7 @@ void Reverse13(int arr[],int rev)
     }
 }
 
+//19. Question
 int Element19_2(int ar[], int ct, int max, int c)
 {
     int i;
@@ -151,6 +156,7 @@ int Element19_2(int ar[], int ct, int max, int c)
     return (1);
 }
 
+//19. Question
 int Element19(int arr[], int max)
 {
     int ct;
@@ -168,6 +174,7 @@ int Element19(int arr[], int max)
     return (-1);
 }
 
+//21. Question
 void Last21(char arr[])
 {
     int ct;
@@ -188,7 +195,6 @@ void Last21(char arr[])
         ct--;
     }
 }
-
 
 int main()
 {
