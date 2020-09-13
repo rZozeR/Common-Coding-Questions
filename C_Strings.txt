@@ -1,0 +1,195 @@
+#include <stdio.h>
+
+// Question 1
+/*
+void Reverse1_2(char st[], int ct)
+{
+    while (st[ct] && st[ct] != '.')
+    {
+        //Put to another array if needed
+        printf("%c",st[ct]);
+        ct++;
+    }
+}
+
+void Reverse1(char str[])
+{
+    int ct = 0;
+    while (str[ct])
+        ct++;
+    
+    while (ct > 0)
+    {
+        if (str[ct] == '.')
+        {
+            Reverse1_2(str,ct+1);
+            printf(".");
+        }
+        ct--;
+    }
+    Reverse1_2(str,ct);
+    printf("\n");
+}
+*/
+
+// Question 6
+/*
+int Roman6_2(char ct)
+{
+    int turn = -1;
+    
+    if (ct == 'I')
+        turn = 1;
+    else if (ct == 'V')
+        turn = 5;
+    else if (ct == 'X')
+        turn = 10;
+    else if (ct == 'L')
+        turn = 50;
+    else if (ct == 'C')
+        turn = 100;
+    else if (ct == 'D')
+        turn = 500;
+    else if (ct == 'M')
+        turn = 1000;
+    
+    return (turn);
+}
+
+int Roman6(char str[])
+{
+    int ct = 0, sum = 0, temp = 0;
+    
+    while (str[ct])
+    {
+        temp = Roman6_2(str[ct]);
+
+        if (temp < Roman6_2(str[ct + 1]))
+        {
+            sum -= temp;
+        }
+        else
+        {
+            sum += temp;
+        }
+
+        ct++;
+    }
+    return (sum);
+}
+*/
+
+//Question 7
+/*
+char *Anagram7_2(char string[], int ct)
+{
+    char temp;
+    int i, j;
+    
+    for (i = 0; i < ct-1; i++)
+    {
+        for (j = i+1; j < ct; j++)
+        {
+            if (string[i] > string[j])
+            {
+                temp = string[i];
+                string[i] = string[j];
+                string[j] = temp;
+            }
+        }
+    }
+    return (string);
+}
+
+char *Anagram7(char str1[], char str2[])
+{
+    int ct1 = 0, ct2 = 0;
+    
+    while (str1[ct1])
+        ct1++;
+    while (str2[ct2])
+        ct2++;
+    
+    if (ct1 != ct2)
+        return ("NO");
+    
+    Anagram_7_2(str1,ct1);
+    Anagram_7_2(str2,ct2);
+    
+    ct1 = 0;
+    while (str1[ct1])
+    {
+        if (str1[ct1] != str2[ct1])
+            return ("NO");
+        ct1++;
+    }
+    return ("YES");
+}
+*/
+
+// Question 11
+/*
+int	Atoi11(const char *str)
+{
+	int sign;
+	int num;
+
+	sign = 1;
+	num = 0;
+	while (*str && (*str == ' ' || *str == '\b' || *str == '\n' || *str == '\f'
+				|| *str == '\t' || *str == '\v' || *str == '\r'))
+		str++;
+	if (*str++ == '-')
+		sign = -1;
+	if (*str == '+')
+		str++;
+	while (*str && *str >= '0' && *str <= '9')
+	{
+		num = num * 10 + (*str - '0');
+		str++;
+	}
+	return (num * sign);
+}
+*/
+
+int main()
+{
+    /* Question 1
+    char str1[] = "i.like.this.program.very.much";
+    printf("%s\n",str1);
+    Reverse1(str1);
+
+    char str2[] = "pqr.mno";
+    printf("%s\n",str2);
+    Reverse1(str2);
+
+    //This one doesnt work properly returns .... ... instead
+    char str3[] = ".... ....";
+    printf("%s\n",str3);
+    Reverse1(str3);
+    */
+    
+    /* Question 6
+    char str1[] = "LXIV";
+    char str2[] = "MIVIII";
+
+    printf("%d\n%d\n",Roman6(str1), Roman6(str2));
+    */
+    
+    /* Question 7
+    char str1[] = "aragb";
+    char str2[] = "bugra";
+    printf("%s",Anagram_7(str1,str2));
+
+    char str3[] = "geeksforgeeks";
+    char str4[] = "forgeeksgeeks";
+    printf("%s",Anagram_7(str3,str4));
+    */
+
+    /* Question 11
+    printf("%d\n",Atoi11("-123"));
+    printf("%d\n",Atoi11("+120000"));
+    */
+    
+    return 0;
+}
